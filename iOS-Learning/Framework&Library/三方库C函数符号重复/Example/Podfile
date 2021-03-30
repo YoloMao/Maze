@@ -1,0 +1,26 @@
+source 'https://github.com/Cocoapods/Specs.git'
+platform :ios, '10.0'
+
+target 'CocoapodsEmbedIJK' do
+  use_frameworks! :linkage => :static
+#  pod 'SJBaseVideoPlayer/IJKPlayer', '3.3.7'
+  pod 'ijkplayerssl', :git => 'https://gitee.com/changsanjiang/ijkplayer.git'
+#  pod 'SJVideoPlayer', '3.2.6'
+
+end
+
+target 'WithoutIJK' do
+  use_frameworks!
+
+end
+
+target 'ManualEmbedIJK' do
+  use_frameworks!
+
+end
+
+target 'CocoapodsEmbedBoth' do
+  use_frameworks! :linkage => :static
+  pod 'ijkplayerssl', :git => 'https://gitee.com/changsanjiang/ijkplayer.git'
+  pod 'NodeMediaClient', '2.4.2'
+end

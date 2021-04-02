@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+#  use_frameworks! :linkage => :static
+  use_frameworks!
+
+#  use_modular_headers!
+
+  # Pods for Example
+#  pod 'BPod', :path => '../BPod'
+  pod 'APod', :path => '../APod'
+  pod 'ASDK', :path => '../ASDK' #dynamic framework
+  pod 'CSDK', :path => '../CSDK' #static framework
+  pod 'DSDK', :path => '../DSDK' #dynamic framework
+
+end

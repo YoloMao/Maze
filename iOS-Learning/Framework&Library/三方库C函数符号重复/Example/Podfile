@@ -3,10 +3,7 @@ platform :ios, '10.0'
 
 target 'CocoapodsEmbedIJK' do
   use_frameworks! :linkage => :static
-#  pod 'SJBaseVideoPlayer/IJKPlayer', '3.3.7'
   pod 'ijkplayerssl', :git => 'https://gitee.com/changsanjiang/ijkplayer.git'
-#  pod 'SJVideoPlayer', '3.2.6'
-
 end
 
 target 'WithoutIJK' do
@@ -20,7 +17,11 @@ target 'ManualEmbedIJK' do
 end
 
 target 'CocoapodsEmbedBoth' do
-  use_frameworks! :linkage => :static
-  pod 'ijkplayerssl', :git => 'https://gitee.com/changsanjiang/ijkplayer.git'
+#  use_frameworks! :linkage => :static
+  use_frameworks!
+
+  pod 'APod', :path => '../APod'
+#  pod 'ijkplayerssl', :git => 'https://gitee.com/changsanjiang/ijkplayer.git'
   pod 'NodeMediaClient', '2.4.2'
+#  pod 'ZPod', :path => '../ZPod'
 end

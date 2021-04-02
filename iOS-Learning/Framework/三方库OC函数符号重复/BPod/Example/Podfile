@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'BPod_Example' do
+  pod 'BPod', :path => '../'
+
+  target 'BPod_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

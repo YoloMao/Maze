@@ -1,0 +1,6 @@
+framework module DSDK {
+  umbrella header "DSDK.h"
+
+  export *
+  module * { export * }
+}

@@ -18,11 +18,9 @@
 
 extern void test(void);
 
-//Cocoapods三方库以名称顺序编译;
-//C函数相同，以最早链接的为准;
-//OC函数相同符号(非Category)，如果在二进制以及静态库中重复的话，会报编译错误；如果在动态库中，编译器以最早链接的为准;
-//OC函数相同符号(Category)，以最后一个链接的为准;
-
+//Cocoapods三方库以名称顺序编译；
+//在静态链接过程中，如果有相同符号，则会编译报错；
+//在动态链接过程中，如果有相同符号，则会忽略掉第一个之外的相同符号。
 - (void)viewDidLoad {
     [super viewDidLoad];
     [NSString performSelector:NSSelectorFromString(@"log")];

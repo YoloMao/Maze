@@ -26,7 +26,7 @@
     //NodeMediaClient
     NodePlayer *node = [[NodePlayer alloc] init];
     node.playerView = self.playerView;
-    node.inputUrl = @"rtmp://58.200.131.2:1935/livetv/gdtv";
+    node.inputUrl = @"rtmp://ns8.indexforce.com/home/mystream";
     self.node = node;
 
     //IJKPlayer
